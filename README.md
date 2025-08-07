@@ -4,7 +4,7 @@
 </p>
 
 # MRI Reconstruction in MATLAB
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?host=matlab.mathworks.com&repo=open/github&file=https://github.com/mathworks/MRI-Reconstruction-in-MATLAB/blob/main/MRI_Project/Scripts/02_GPU_Support_Scripts/demoScript.m)
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/MRI-Reconstruction-in-MATLAB&file=https://github.com/mathworks/MRI-Reconstruction-in-MATLAB/blob/main/MRI_Project/Scripts/02_GPU_Support_Scripts/demoScript.m)
 
 ## Overview
 
