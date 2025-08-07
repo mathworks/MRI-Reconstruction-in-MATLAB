@@ -72,12 +72,10 @@ You will need MATLAB release R2024b  or newer and the following MathWorks Produc
 
 
 ### Usage
+1. **Navigate to the `MRI_Project/scripts` folder.** There are two folders available for different intentions:
 
-1. **Run the `startup.m` file first.** It will download the dataset from support files and create the necessary folder structure to run the MRI reconstruction examples.
-
-2. **Navigate to the `MRI_Project/scripts` folder.** There are two folders available for different intentions:
-
-3. **Testing Different MRI Reconstruction Examples:**  Check the folder: **01_Example_Scripts**
+2. **Testing Different MRI Reconstruction Examples:**  Check the folder: **01_Example_Scripts**
+3. **Run the `startup.m` file first.** It will download the dataset from support files and create the necessary folder structure to run the MRI reconstruction examples.
 
    Run the desired algorithm script:
 
@@ -91,7 +89,9 @@ You will need MATLAB release R2024b  or newer and the following MathWorks Produc
    
    Check the folder: **02_GPU_Support_Scripts**
 
-Run the `demoScript.mlx`, which provides options to run all three examples on GPU or CPU. Furthermore, the script allows to automatically generate CUDA code of all three examples.
+Run the `demoScript.mlx`, which provides options to run all three examples on GPU or CPU. Furthermore, the script allows to automatically generate CUDA code of all three examples. 
+
+
 
 
 ### Reference
