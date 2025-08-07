@@ -66,7 +66,7 @@ You will need MATLAB release R2024b  or newer and the following MathWorks Produc
 
 ### Installation
 1. Clone the repository:
-`git clone https://github.com/sagar-AI-MW/MRI-Reconstruction-in-MATLAB.git`
+`git clone https://github.com/mathworks/MRI-Reconstruction-in-MATLAB.git`
 2. Navigate to the project directory:`cd MRI-Reconstruction-in-MATLAB`
 3. Open MATLAB and add the project directory to the path: `addpath(genpath('path_to_project_directory'))`
 
