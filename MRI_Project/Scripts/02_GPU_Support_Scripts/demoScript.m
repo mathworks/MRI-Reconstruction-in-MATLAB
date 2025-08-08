@@ -1,6 +1,6 @@
 %[text] # MRI Reconstruction Demo Script
 %[text] 
-%[text]   ![direction3.gif](text:image:9d7c)
+%[text]  ![direction3.gif](text:image:9d7c)
 %[text] 
 %[text] 
 %[text] This demo script showcases the process of MRI reconstruction using k-space data. It is designed to run efficiently on both GPU and CPU, providing three types of visualizations: Volume Rendering, Cinematic Rendering, and Slice Viewer. Additionally, the script generates CUDA code for all three approaches, ensuring high performance and flexibility.
@@ -17,9 +17,37 @@
 %[text] **Load MRI k-space Data**: First, we load the k-space data from an HDF5 file. The `h5read` function is used to read the specified dataset from the file.
 %%
 addpath(genpath(pwd)) %adding datafiles and example scripts
-fileName ="2022061003_T101.h5";
+%%
+% Define URLs and paths
+kspaceDataFileURL = 'https://ssd.mathworks.com/supportfiles/medical/M4Raw_sample.zip';
+zipFilePath = fullfile(pwd, 'M4Raw_sample.zip');
+
+% Download the ZIP file
+websave(zipFilePath, kspaceDataFileURL);
+
+% List contents of the ZIP file
+zipContents = unzip(zipFilePath, tempdir);  % Extract to a temporary directory
+
+% Find the first T1 .h5 file
+T1Files = dir(fullfile(tempdir, '**', '*T1*.h5'));
+
+if ~isempty(T1Files)
+    % Get full path of the first T1 file
+    firstT1File = fullfile(T1Files(1).folder, T1Files(1).name);
+
+    % Define destination path
+    destinationFile = fullfile(pwd, T1Files(1).name);
+
+    % Copy only the first T1 file to your inputData folder
+    copyfile(firstT1File, destinationFile);
+else
+    warning('No T1 .h5 files found in the archive.');
+end
+
+%%
+
 datasetPath = '/kspace';
-data =h5read(fileName,datasetPath) %[output:2fabc4a4]
+data =h5read(destinationFile,datasetPath) %[output:2fabc4a4]
 %%
 %[text] **Set Acceleration Factor**: Define the acceleration factor for undersampling the k-space data. This factor determines the level of undersampling applied during the reconstruction process. *(Applicable only for Compressed Sense (CS) and Deep Learning (DL) methods)*
 %Accleration factor
