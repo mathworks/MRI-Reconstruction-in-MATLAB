@@ -44,7 +44,7 @@ Welcome to the **MRI Reconstruction in MATLAB**&reg;  repository! This project s
 ### Prerequisites
 
 
-You will need MATLAB release R2024b  or newer and the following MathWorks Products to run these examples.
+You will need MATLAB release R2025a  or newer and the following MathWorks Products to run these examples.
 
 
 • [Parallel Computing Toolbox](https://www.mathworks.com/products/parallel-computing.html)&trade;
