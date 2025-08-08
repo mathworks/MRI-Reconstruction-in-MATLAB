@@ -6,7 +6,6 @@
 % modality .h5 files to the appropriate directory.
 
 
-
 % Required folder structure for storing results from three examples
 dataDir = fullfile(pwd, "data", "rawData");
 inputData = fullfile(pwd, "data", "inputData");
